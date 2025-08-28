@@ -1,11 +1,11 @@
 :root {
   --white: #FFFAE3;
   --lblue: #CECAFD;
-  --blue: #7373FF;
+  --lilac: #d29dd7;
   --dblue: #3F3A73;
   --magenta: #DB3069;
   --beige: #F9DBBD;
-  --black: #211731;
+  --black: #31171d;
 }
 
 @font-face {
@@ -21,22 +21,43 @@
   src: url(../fonts/fs-pixel-sans-unicode-regular.ttf);
 }
 @font-face {
-  font-family: Bricolage-Grotesque;
-  src: url(../fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf);
+  font-family: Host-Grotesk;
+  src: url(../fonts/HostGrotesk-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Host-Grotesk-Italic;
+  src: url(../fonts/HostGrotesk-Italic-VariableFont_wght.ttf);
 }
 
 body { /*default styles*/
     background-color: var(--white);
     border: 0;
-    font-family: Bricolage-Grotesque;
+    font-family: Host-Grotesk;
     font-size: 16px;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
 }
+
 .main-container{
   margin: 0 15vw;
   margin-top: 100px;
 }
+
+h2{
+  color: var(--black);
+  font-size: 2.25em;
+  font-weight: 800;
+  margin: 0;
+  text-shadow: 5px 5px 10px var(--beige); /* Horizontal, Vertical, Blur, Color */
+}
+h3{
+  color: var(--black);
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0;
+}
+
 
 
 
@@ -49,7 +70,7 @@ nav{
 .nav-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 20px 16vw;
 }
 nav a {
   font-family: Pixel-Sans;
@@ -71,7 +92,7 @@ nav a {
 /* ---------------------------------------------------------------------HEADER-------------------------------------------------------------------*/
 
 h1 {
-  color: var(--blue);
+  color: var(--lilac);
   font-family: Mondwest;
   font-size: 8em;
   font-weight: 100;
@@ -87,6 +108,17 @@ h1 {
   line-height: 1;
 }
 
+
+
+
+/* ---------------------------------------------------------------------CARDS-------------------------------------------------------------------*/
+
+.card-img{
+  width: 70%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
 
 
 
@@ -137,7 +169,7 @@ h1 {
     margin-top: 100px;
   }
   .nav-container {
-    padding: 20px 5vw;
+    padding: 20px 6vw;
   }
   nav a {
     font-family: Pixel-Sans;
