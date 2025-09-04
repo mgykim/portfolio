@@ -1,6 +1,5 @@
 :root {
   --white: #FFFAE3;
-  --lblue: #CECAFD;
   --lilac: #d29dd7;
   --dblue: #3F3A73;
   --magenta: #DB3069;
@@ -29,6 +28,10 @@
   src: url(../fonts/HostGrotesk-Italic-VariableFont_wght.ttf);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body { /*default styles*/
     background-color: var(--white);
     border: 0;
@@ -40,13 +43,13 @@ body { /*default styles*/
 }
 
 .main-container{
-  margin: 0 15vw;
-  margin-top: 100px;
+  margin: 100px auto;
+  width: 70vw;
 }
 
 h2{
   color: var(--black);
-  font-size: 2.25em;
+  font-size: 2em;
   font-weight: 800;
   line-height: 1;
   margin: 0;
@@ -54,13 +57,18 @@ h2{
 }
 h3{
   color: var(--black);
-  font-size: 1.5em;
+  font-family: Pixel-Sans;
+  font-size: 2em;
   font-weight: 400;
   line-height: 1;
   margin: 0;
 }
 a {
   text-decoration: none;
+}
+i {
+  position: relative;
+  z-index: -1;
 }
 
 
@@ -72,9 +80,13 @@ nav{
   width: 100%;
 }
 .nav-container {
+  background-color: none;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 16vw;
+  padding: 15px 2vw;
+  margin: 15px 12.5vw;
+  transition: 0.3s ease-in-out; 
 }
 nav a {
   font-family: Pixel-Sans;
@@ -86,9 +98,17 @@ nav a {
 .nav-right a{
   color: var(--white);
   margin-left: 50px;
+  transition: 0.3s ease-in-out; 
 }
 
-
+.nav-container.scrolled{
+  background-color: rgba(255, 250, 227, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 10px 5px rgba(151, 27, 147, 0.1);
+}
+.nav-right.scrolled2 a{
+  color: var(--black);
+}
 
 
 
@@ -102,7 +122,7 @@ h1 {
   letter-spacing: 0px;
   line-height: 0.8;
   margin: 0;
-  text-shadow: 5px 5px 15px var(--black); /* Horizontal, Vertical, Blur, Color */
+  text-shadow: 5px 5px 15px var(--black);
 }
 
 .header-p {
@@ -116,19 +136,94 @@ h1 {
 
 /* ---------------------------------------------------------------------CARDS-------------------------------------------------------------------*/
 
+.row-grid{
+  display: grid;
+  gap: 15px;
+  margin: 15px auto;
+  grid-template-columns: 1fr 1fr;
+}
+
 .card {
   border-radius: 20px;
-  box-shadow: 10px 10px 15px 10px rgba(151, 27, 147, 0.1);
-  margin: auto;
-  margin-bottom: 100px;
-  padding: 30px 70px;
+  box-shadow: 5px 5px 10px 5px rgba(64, 15, 79, 0.2);
+  flex: 1 1 100px;
+  margin-bottom: 30px;
 }
 .card-img{
-  width: 100%;
-  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
   display: block;
-  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
+  
 }
+.card-padding{
+  padding: 15px;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------MOBILE RESPONSIVENESS---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+    overflow-x: hidden;
+  }
+  .main-container{
+    margin: 0 6vw;
+    margin-top: 100px;
+    width: 85vw;
+  }
+  .nav-container {
+    padding: 10px 5vw;
+    margin: 2vw;
+    border-radius: 30px;
+  }
+  nav a {
+    font-family: Pixel-Sans;
+    font-size: 3.5em;
+    text-decoration: none;
+  }
+  .card{
+    width: 85vw;
+  }
+  #grad1 {
+    height: 470px;
+  }
+  #grad2 {
+    height: 570px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 12px; 
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  /* current default */
+  body {
+    font-size: 14px; 
+  }
+  .row-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 16px; 
+  }
+}
+
+
 
 
 
@@ -140,6 +235,7 @@ h1 {
 .highlight-magenta{
   color: var(--magenta);
 }
+
 
 .gradients{
   max-width: 100%;
@@ -163,55 +259,4 @@ h1 {
   position: absolute;
   width: 140vw;
   z-index: -1;
-}
-
-
-
-/* ----------------------------------------------------------------MOBILE RESPONSIVENESS---------------------------------------------------------------*/
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 12px;
-  }
-  .main-container{
-    margin: 0 5vw;
-    margin-top: 100px;
-  }
-  .nav-container {
-    padding: 20px 6vw;
-  }
-  nav a {
-    font-family: Pixel-Sans;
-    font-size: 3.5em;
-    text-decoration: none;
-  }
-  #grad1 {
-    height: 470px;
-  }
-  #grad2 {
-    height: 570px;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  body {
-    font-size: 14px; 
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  /* current default */
-  body {
-    font-size: 16px; 
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    font-size: 16px; 
-  }
 }
