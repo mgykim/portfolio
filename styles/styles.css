@@ -147,7 +147,8 @@ h1 {
   border-radius: 20px;
   box-shadow: 5px 5px 10px 5px rgba(64, 15, 79, 0.2);
   flex: 1 1 100px;
-  margin-bottom: 30px;
+  margin: 30px auto;
+  width: 50vw;
 }
 .card-img{
   border-radius: 20px 20px 0px 0px;
@@ -184,7 +185,7 @@ h1 {
   }
   nav a {
     font-family: Pixel-Sans;
-    font-size: 3.5em;
+    font-size: 3em;
     text-decoration: none;
   }
   .card{
@@ -199,14 +200,14 @@ h1 {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   body {
-    font-size: 12px; 
+    font-size: 13px; 
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
   /* current default */
   body {
     font-size: 14px; 
