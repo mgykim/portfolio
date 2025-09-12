@@ -1,26 +1,14 @@
-.nav-container {
-    margin: 15px 1vw;
-}
-
-.nav-container.scrolled{
-    margin: 15px 10.5vw;
-}
-
-.case-header iframe, img{
-    width: 40vw;
-    min-height: 22vw;
-    height: auto;
-    border-radius: 15px;
-}
-.case-header {
-    height: 70vh;
-    align-items: center;
-    padding-bottom: 100px;
-}
-
 .main-container{
-  margin: 100px auto;
+  margin: 115px auto;
   width: 90vw;
+}
+
+.main-container > div{
+    margin: 100px 0;
+}
+
+.case-header-text{
+    margin-top: 150px;
 }
 
 body{
@@ -34,13 +22,69 @@ h1{
 h3{
     color: var(--magenta);
 }
+
+iframe {
+    width: 50vw;
+    height: 28vw;
+    border-radius: 10px;
+}
+.wide-img{
+    width: 50vw;
+}
+.long-img{
+    width: 30vw;
+}
+.square-img{
+    width: 40vw;
+}
 .left-aligned {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
 }
 .left-aligned > div:last-of-type {
-    margin-left: 5vw;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
+    justify-content: center;
+}
+
+.right-aligned {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+}
+.right-aligned > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  /* current default */
+  .left-aligned {
+    grid-template-columns: 1fr;
+  }
+  .right-aligned {
+    grid-template-columns: 1fr;
+  }
+  .case-header iframe, img{
+    width: 90vw;
+    height: 50vw;   
+  }
+  iframe{
+    width: 90vw;
+    height: 50vw;
+  }
+  .wide-img, .long-img, .square-img{
+    width: 100%;
+  }
+  .case-header-text{
+    margin-top: 0;
+  }
+  .main-container > div{
+    margin: 50px 0;
+  }
 }
