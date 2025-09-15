@@ -31,21 +31,27 @@ p{
 iframe {
     width: 50vw;
     height: 28vw;
-    border-radius: 30px;
+    border-radius: 2em;
 }
 .wide-img{
-    width: 50vw;
+  height: auto;
+  width: 50vw;
+  border-radius: 2em;
 }
 .long-img{
-    width: 30vw;
+  height: auto;
+  width: 30vw;
+  border-radius: 2em;
 }
 .square-img{
-    width: 40vw;
+  height: auto;
+  width: 40vw;
+  border-radius: 2em;
 }
 .left-aligned {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5vw;
+    gap: 2vw;
 }
 .left-aligned > div:last-of-type {
     display: flex;
@@ -65,7 +71,7 @@ iframe {
 }
 
 .middle-aligned {
-  width: 70vw;
+  width: 50vw;
 }
 
 
@@ -78,6 +84,9 @@ iframe {
   }
   .right-aligned {
     grid-template-columns: 1fr;
+  }
+  .middle-aligned {
+    width: 100%;
   }
   .case-header iframe, img{
     height: 50vw;   
