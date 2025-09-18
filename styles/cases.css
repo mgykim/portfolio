@@ -27,6 +27,7 @@ h2{
 }
 p{
   margin-bottom: 2em;
+  color: var(--brown);
 }
 iframe {
     width: 50vw;
@@ -35,23 +36,25 @@ iframe {
 }
 .wide-img{
   height: auto;
-  width: 50vw;
+  width: 55vw;
   border-radius: 2em;
 }
 .long-img{
-  height: auto;
+  height: 30vw;
   width: 30vw;
   border-radius: 2em;
 }
 .square-img{
   height: auto;
-  width: 40vw;
+  width: 35vw;
   border-radius: 2em;
 }
 .left-aligned {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2vw;
+    grid-gap: 2vw;
+    grid-template-areas:
+    "photo text"
 }
 .left-aligned > div:last-of-type {
     display: flex;
@@ -62,7 +65,9 @@ iframe {
 .right-aligned {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2vw;
+    grid-gap: 2vw;
+    grid-template-areas:
+    "text photo"
 }
 .right-aligned > div:first-of-type {
     display: flex;
@@ -71,7 +76,10 @@ iframe {
 }
 
 .middle-aligned {
-  width: 50vw;
+  width: 55vw;
+}
+.long-img, .wide-img, square-img{
+  grid-area: photo;
 }
 
 
