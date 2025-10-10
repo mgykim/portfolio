@@ -61,7 +61,7 @@ h3{
   color: var(--black);
   font-family: Host-Grotesk;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1;
   margin: 0;
 }
@@ -100,8 +100,8 @@ nav{
   border-radius: 25px;
   display: flex;
   justify-content: space-between;
-  padding: 0 4vw;
-  margin: 10px 11vw;
+  padding: 0 2.5vw;
+  margin: 10px 13vw;
   transition: background-color 0.3s ease-in-out; 
 }
 nav a {
@@ -109,8 +109,8 @@ nav a {
   font-family: Pixel-Sans;
   font-size: 2em;
   transition: 0.1s ease-in-out;
-  padding-top: 10px;
-  padding-bottom: 13px;
+  padding-top: 6px;
+  padding-bottom: 10px;
 }
 nav a:hover {
   transform: translateY(-5px);
@@ -154,12 +154,6 @@ h1 {
   text-shadow: 5px 5px 15px var(--black);
 }
 
-.header-p {
-  color: var(--black); 
-  font-size: 2em;
-  line-height: 1;
-}
-
 
 
 
@@ -180,12 +174,13 @@ h1 {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin: 50px auto;
-  transition: 0.2s ease-out;
-  background: linear-gradient(var(--lilac) -100%, rgba(215, 86, 159, 0) 70%)
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(var(--lilac) -100%, rgba(215, 86, 159, 0) 70%);
 }
 .card:hover {
   box-shadow: 5px 5px 25px 10px rgba(64, 15, 79, 0.15);
   transform: translateY(-10px);
+  background-color: rgb(230, 223, 216);
 }
 .card-img{
   border-radius: 0px 25px 25px 0px;
@@ -315,5 +310,15 @@ h1 {
   position: absolute;
   height: 800px;
   width: 120vw;
+  z-index: -1;
+}
+
+#casesGrad {
+  background: radial-gradient(farthest-side at center, var(--brown) 20%, rgba(255, 8, 8, 0) 100%);
+  margin-left: 0vw;
+  margin-top: -400px;
+  position: absolute;
+  height: 800px;
+  width: 150vw;
   z-index: -1;
 }
