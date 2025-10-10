@@ -1,7 +1,7 @@
 :root {
   --white: #E6E6E6;
   --lilac: #e0b0e0;
-  --brown: #642e2e;
+  --brown: #855369;
   --magenta: #bd3c83;
   --beige: #e2d0bc;
   --black: #31171d;
@@ -30,6 +30,7 @@
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body { /*default styles*/
@@ -48,28 +49,32 @@ body { /*default styles*/
 }
 
 h2{
-  color: var(--black);
-  font-size: 2.2em;
+  color: var(--brown);
+  font-family: Mondwest;
+  font-size: 4em;
   font-weight: 800;
-  line-height: 1;
-  margin: 0;
+  letter-spacing: -.05em;
+  line-height: 0.8;
+  margin: 0 0 .2em 0;
 }
 h3{
   color: var(--black);
-  font-family: Pixel-Sans;
-  font-size: 2.2em;
+  font-family: Host-Grotesk;
+  font-size: 1.5em;
   font-weight: 400;
   line-height: 1;
   margin: 0;
 }
 h4{
+  color: var(--black);
   font-size: 1.3em;
   font-weight: 800;
   line-height: 1.5;
   margin: 0;
 }
 p{
-  font-size: 1.3em;
+  color: var(--black);
+  font-size: 1.2em;
   line-height: 1.15;
   margin: 0;
 }
@@ -169,13 +174,14 @@ h1 {
 
 .card {
   border-radius: 25px;
-  box-shadow: 5px 5px 20px 5px rgba(64, 15, 79, 0.05);
+  box-shadow: 5px 5px 15px 5px rgba(64, 15, 79, 0.08);
   flex: 1 1 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin: 50px auto;
   transition: 0.2s ease-out;
+  background: linear-gradient(var(--lilac) -100%, rgba(215, 86, 159, 0) 70%)
 }
 .card:hover {
   box-shadow: 5px 5px 25px 10px rgba(64, 15, 79, 0.15);
