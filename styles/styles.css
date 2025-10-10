@@ -1,10 +1,10 @@
 :root {
   --white: #E6E6E6;
-  --lilac: #e0b0e0;
+  --lilac: #dcbbed;
   --brown: #855369;
   --magenta: #bd3c83;
   --beige: #e2d0bc;
-  --black: #31171d;
+  --black: #4a2b32;
 }
 
 @font-face {
@@ -174,7 +174,7 @@ h1 {
 
 .card {
   border-radius: 25px;
-  box-shadow: 5px 5px 15px 5px rgba(64, 15, 79, 0.08);
+  box-shadow: 5px 5px 20px 5px rgba(64, 15, 79, 0.08);
   flex: 1 1 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
