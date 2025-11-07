@@ -43,10 +43,13 @@ body { /*default styles*/
     padding: 0;
 }
 
+.wrapper{
+  overflow-x: hidden;
+}
+
 .main-container{
   margin: 100px auto;
   width: 70vw;
-  overflow-x: hidden;
 }
 
 h2{
