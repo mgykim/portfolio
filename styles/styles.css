@@ -293,6 +293,7 @@ h1 {
   background: radial-gradient(farthest-side at center, var(--black) 20%, rgba(255, 255, 255, 0) 100%);
   margin-left: -40vw;
   margin-top: -200px;
+  overflow-x: hidden;
   position: absolute;
   width: 200vw;
   z-index: -1;
@@ -301,6 +302,7 @@ h1 {
   background: radial-gradient(farthest-side at center, var(--black) 20%, rgba(255, 255, 255, 0) 100%);
   margin-left: -30vw;
   margin-top: -300px;
+  overflow-x: hidden;
   position: absolute;
   width: 140vw;
   z-index: -1;
@@ -308,8 +310,9 @@ h1 {
 #pinkGrad1 {
   background: radial-gradient(farthest-side at center, var(--magenta) 20%, var(--lilac) 60%, rgba(255, 8, 8, 0) 100%);
   margin-left: 40vw;
-  opacity: 40%;
   margin-top: 100px;
+  opacity: 40%;
+  overflow-x: hidden;
   position: absolute;
   height: 800px;
   width: 120vw;
@@ -320,6 +323,7 @@ h1 {
   background: radial-gradient(farthest-side at center, var(--brown) 20%, rgba(255, 8, 8, 0) 100%);
   margin-left: 0vw;
   margin-top: -400px;
+  overflow-x: hidden;
   position: absolute;
   height: 800px;
   width: 150vw;
