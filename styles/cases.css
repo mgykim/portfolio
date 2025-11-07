@@ -30,23 +30,16 @@ iframe {
   width: 100%;
   border-radius: 2em;
 }
+
+img{
+  filter: drop-shadow(5px 20px 25px rgba(223, 80, 223, 0.15));
+}
 .left-aligned {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2vw;
 }
 .left-aligned > div:last-of-type {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.right-aligned {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2vw;
-}
-.right-aligned > div:first-of-type {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,9 +55,6 @@ iframe {
 @media only screen and (max-width: 992px) {
   /* current default */
   .left-aligned {
-    grid-template-columns: 1fr;
-  }
-  .right-aligned {
     grid-template-columns: 1fr;
   }
   .middle-aligned {
