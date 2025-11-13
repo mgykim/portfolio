@@ -195,8 +195,40 @@ h1 {
   padding: 50px;
 }
 
+/* ---------------------------------------------------------------------DESIGNS GALLERY-------------------------------------------------------------------*/
 
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
 
+.column{
+}
+
+.gallery-img{
+  border-radius: 25px;
+  box-shadow: 5px 5px 20px 5px rgba(64, 15, 79, 0.08);
+  align-items: center;
+  margin-bottom: 15px;
+  transition: 0.2s ease-in-out;
+  background: linear-gradient(var(--lilac) -100%, rgba(215, 86, 159, 0) 70%);
+}
+
+.gallery-img:hover{
+  box-shadow: 5px 5px 25px 10px rgba(64, 15, 79, 0.15);
+  transform: translateY(-10px);
+  background-color: rgb(230, 223, 216);
+}
+.gallery-img img{
+  object-fit: cover;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.gallery-img-padding{
+  padding: 5px 20px 15px 20px;
+}
 
 
 /* ----------------------------------------------------------------MOBILE RESPONSIVENESS---------------------------------------------------------------*/
@@ -222,10 +254,10 @@ h1 {
     text-decoration: none;
   }
   #grad1 {
-    height: 450px;
+    height: 550px;
   }
   #grad2 {
-    height: 580px;
+    height: 680px;
   }
   .row-grid {
     grid-template-columns: 1fr;
@@ -235,6 +267,9 @@ h1 {
   }
   .card-img{
   border-radius: 0px 0px 25px 25px;
+  }
+  .row{
+    grid-template-columns: 1fr;
   }
 }
 
