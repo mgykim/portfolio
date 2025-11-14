@@ -275,6 +275,11 @@ h1 {
   .row{
     grid-template-columns: 1fr;
   }
+
+  .outline{
+    font-size: 1.5em;
+    margin-right: 30px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -322,6 +327,20 @@ h1 {
 }
 .highlight-magenta{
   color: var(--magenta);
+}
+
+.outline{
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: 300;
+  padding: 3px 15px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 20px 5px rgba(238, 183, 255, 0.18);
+  transition: 0.3s ease-in-out;
+}
+
+.outline:hover{
+  background-color: var(--brown);
 }
 
 
